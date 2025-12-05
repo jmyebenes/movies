@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Películas</string>
+    <!-- HOME -->
+    <string name="home_action_more_info">Más información</string>
+    <string name="home_title_popular">Populares</string>
+    <string name="home_title_now_playing">En cartelera</string>
+    <string name="home_title_upcoming">Próximas</string>
+    <string name="home_title_favorites">Favoritos</string>
+
+    <!-- MOVIE DETAIL -->
+    <string name="movie_detail_label_release_date">Estreno</string>
+    <string name="movie_detail_label_runtime">Duración</string>
+    <string name="movie_detail_label_runtime_value">%1$d min</string>
+    <string name="movie_detail_label_rating">Puntuación</string>
+
+    <string name="movie_detail_title_synopsis">Sinopsis</string>
+    <string name="movie_detail_title_cast">Reparto</string>
+    <string name="movie_detail_title_crew">Equipo técnico</string>
+    <string name="movie_detail_title_similar">Similares</string>
+
+    <!-- PERSON DETAIL -->
+    <string name="person_detail_title_biography">Biografía</string>
+    <string name="person_detail_title_movies">Películas</string>
+</resources>

@@ -1,0 +1,16 @@
+.gradle/
+build/
+**/build/
+local.properties
+*.keystore
+*.jks
+*.iml
+.idea/
+.DS_Store
+Thumbs.db
+.kotlin/
+.cxx/
+externalNativeBuild/
+*.log
+app/release/
+app/debug/
