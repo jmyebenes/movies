@@ -4,12 +4,14 @@ import android.util.Log
 import dev.jmyp.movies.utils.Constants
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
+import io.ktor.client.plugins.compression.ContentEncoding
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.header
+import io.ktor.http.HttpHeaders
 import io.ktor.http.URLProtocol
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
@@ -17,6 +19,10 @@ import java.util.Locale
 
 fun createHttpClient(): HttpClient {
     return HttpClient(OkHttp) {
+        install(ContentEncoding) {
+            gzip()
+            deflate()
+        }
         install(ContentNegotiation) {
             json(Json {
                 ignoreUnknownKeys = true
@@ -43,6 +49,7 @@ fun createHttpClient(): HttpClient {
                 "Bearer ${Constants.Api.TMDB_API_KEY}"
             )
             header("Accept", "application/json")
+            header(HttpHeaders.AcceptEncoding, "identity")
         }
         // timeouts, interceptors, etc.
     }

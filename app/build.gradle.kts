@@ -81,6 +81,7 @@ dependencies {
     implementation(libs.ktor.content)
     implementation(libs.ktor.serialization)
     implementation(libs.ktor.logging)
+    implementation(libs.ktor.encoding)
     implementation(libs.coil.compose)
     implementation(libs.coil.okhttp3)
     implementation(libs.androidx.datastore.preferences)
